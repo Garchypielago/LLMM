@@ -1,0 +1,89 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.avion {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    justify-content: center;
+    align-items: end;
+}
+
+.avion span {
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: .5em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+}
+
+
+.i16 {
+    background-image: url('I16.jpg');
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.bf109 {
+    background-image: url('Me109.jpg');
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: span 2;
+}
+
+.ms406 {
+    background-image: url('Ms406.jpg');
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.p51 {
+    background-image: url('P51.jpg');
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.spitfire {
+    background-image: url('Spitfire.jpg');
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+.yak3 {
+    background-image: url('Yak3.jpg');
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.zero {
+    background-image: url('Zero.jpg');
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.fw190 {
+    background-image: url('Fw190.jpg');
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: span 2;
+}

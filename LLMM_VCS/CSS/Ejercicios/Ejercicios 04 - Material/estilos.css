@@ -1,0 +1,51 @@
+/* CSS Hoja de estilo. excel5.css */
+ul {
+    list-style-type: none
+}
+
+.rectangulo1 {
+    background-color: beige;
+    color: green;
+    border: 1px;
+    border-style: solid;
+}
+
+.rectangulo2 {
+    background-color: beige;
+    color: green;
+    border: 1px;
+    border-style: solid;
+}
+
+.rectangulo3 {
+    background-color: beige;
+    color: green;
+    border: 1px;
+    border-style: solid;
+}
+
+/* h2 {
+    margin-top: 0cm;
+    margin-bottom: 0;
+} */
+
+main h2:first-child {
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+main h2:nth-child(2) {
+    margin-top: 25px;
+}
+
+main h2:nth-of-type(3) {
+    width: 75%;
+    margin: auto;
+}
+
+span,
+strong {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}

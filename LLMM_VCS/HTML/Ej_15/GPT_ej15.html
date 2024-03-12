@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro en Entidad Bancaria</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Registro en Entidad Bancaria</h1>
+    </header>
+
+    <main>
+        <form action="http://localhost:8080/view-form/post" method="post" enctype="multipart/form-data">
+            <!-- DNI -->
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Z]{1}" required>
+            <br>
+
+            <!-- Nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" minlength="2" maxlength="50" required>
+            <br>
+
+            <!-- Apellidos -->
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" minlength="2" maxlength="50" required>
+            <br>
+
+            <!-- Correo electrónico -->
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <!-- Contraseña -->
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" minlength="8" maxlength="20" required>
+            <br>
+
+            <!-- Confirmar contraseña -->
+            <label for="confirmPassword">Confirmar contraseña:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" maxlength="20" required>
+            <br>
+
+            <!-- Documento de identificación -->
+            <label>Documento de identificación:</label>
+            <label for="anverso">Anverso (parte delantera):</label>
+            <input type="file" id="anverso" name="anverso" accept=".jpg, .jpeg, .png" required>
+            <br>
+
+            <label for="reverso">Reverso (parte de atrás):</label>
+            <input type="file" id="reverso" name="reverso" accept=".jpg, .jpeg, .png">
+            <br>
+
+            <!-- Checkbox para aceptar las condiciones de contratación -->
+            <input type="checkbox" id="condiciones" name="condiciones" required>
+            <label for="condiciones">
+                Acepto las condiciones legales. <a href="https://www.iesclaradelrey.es" target="_blank">Condiciones legales</a>
+            </label>
+            <br>
+
+            <!-- Botón "Registrarme" -->
+            <button type="submit">Registrarme </button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Entidad Bancaria</p>
+    </footer>
+
+</body>
+
+</html>

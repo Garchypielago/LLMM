@@ -1,0 +1,43 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav ul li {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: slategray;
+    color: white;
+    margin-right: 1em;
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 5em 2em;
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: lightgrey;
+}
+
+nav ul li:hover a {
+    color: black;
+}
+
+input [type="text"] {
+    width: 55em;
+}
+
+input [type="number"] {
+    width: 4em;
+}
+
+footer,
+header {
+    background-color: slategray;
+    color: white;
+    text-align: center;
+}

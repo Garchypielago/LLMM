@@ -1,0 +1,69 @@
+<!--
+Crea una página HTML con imágenes que se adapten al ancho de la página, según los 
+siguientes requisitos:
+- Crea una carpeta “Ejercicio08”, en la que se realizará todo el trabajo.
+- Crea, dentro de la carpeta Ejercicio08, una carpeta “imagenes”
+- Descarga de Internet tres imágenes de distinto ancho:
+o 240p (352 x 240)
+o 480p (858 x 480)
+o 720p (1280 x 720)
+o 1080p (1920 x 1080).
+Para buscar en google imágenes con un tamaño concreto se puede añadir a la 
+búsqueda “imagesize:800x600”
+- Crea una página web HTML 5
+- El título de la página será “Prueba de imágenes ajustables”.
+- Tendrá un encabezado de nivel 1 (h1) con este mismo título.
+- Utiliza los tags <picture> y <source> para insertar las imágenes en la página. Ajusta el 
+tamaño de cada source para que se adapte a los tamaños de las imágenes. Ejemplo: si 
+el ancho es menor de 858 se usa la menor de las imágenes, entre 858 y 1280 se usa la 
+siguiente más grande, y así para las cuatro.
+Prueba a cambiar el tamaño de la ventana del navegador y comprueba si está funcionando 
+correctamente-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de imágenes ajustables</title>
+</head>
+
+
+<!--Con el máximo de la imagen-->
+
+<body>
+    <h1>Prueba de imágenes ajustables</h1>
+
+<div>
+
+<div>
+    <picture>
+        <source media="(max-width: 858px)" srcset="imagenes/EvangelionPadre.png">
+        
+        <source media="(max-width: 1280px)" srcset="imagenes/SinAcabar(858x480).jpeg">
+        
+        <source media="(max-width: 1700px)" srcset="imagenes/One-Piece-11-1280x720.jpg">
+       
+        <img src="imagenes/claymore(1920x1080).jpg" alt="cuarta">
+    </picture>
+</div>
+
+
+<!--Con el mínimo de la imagen-->
+
+<div>
+
+    <picture>
+        <source media="(min-width: 1700px)" srcset="imagenes/claymore(1920x1080).jpg">
+
+        <source media="(min-width: 1280px)" srcset="imagenes/One-Piece-11-1280x720.jpg">
+
+        <source media="(min-width: 858px)" srcset="imagenes/SinAcabar(858x480).jpeg">
+
+        <img src="imagenes/EvangelionPadre.png" alt="cuarta">
+    </picture>
+</div>
+</body>
+
+</html>

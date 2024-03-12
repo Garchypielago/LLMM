@@ -1,0 +1,23 @@
+/* Tener en cuenta clases(.ejemplo), id(#ejemplo) y atributo([ejemplo]) de los elementos del html  */
+/* "*" es mala praactica solo usar mara restablecer valores de margin, padding... */
+/*  (x","y) añadir y elemento, (x" "y) ys dentro de x, (x">"y) primeros ys en x,
+    (x"~"y) xs hermanos de y,  (x"+"y) xs adyacentes a y */
+/* Font [family,size,weight] */
+/* div, span : tenrelos encuenta */
+/*  html {
+     --btn-back-color: teal;                    importante los --
+     --btn-width-mediano: 200px;                crea las var
+    }
+    button {
+    background-color: var(--btn-back-color);    var refiere a lo de antes
+    }
+    .mediano {
+    width: var(--btn-width-mediano);            otro caso de var
+    }   
+    
+    Con esto puedo referenciar a lo anterior*/
+/*  calc(). Operaciones con dimensiones. Ejemplo: calc(0.2rem + 50px)
+    max() y min(). Máximo o mínimo de dos valores.
+    mod(). Módulo, resto de la división entera.
+    attr(). Extrae el valor de un atributo del elemento en que se aplica 
+    la regla. Sólo se puede usar en ciertas situaciones que ya veremos.*/

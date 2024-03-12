@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+    <form method="post" action="ejercicio13.html">
+        <p>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="nombre">
+        </p>
+        <p>
+            <label for="apellido_1">Primer apellido: </label>
+            <input type="text" name="name1" id="apellido_1" placeholder="apellido">
+        </p>
+        <p>
+            <label for="apellido_2">Segundo apellido: </label>
+            <input type="text" name="name2" id="apellido_2" placeholder="apellido">
+        </p>
+        <p><label><input type="radio" value="Profesor" name="optioncheck[]">Profesor</label></p>
+        <p><label><input type="radio" value="Alumno" name="optioncheck[]">Alumno</label></p>
+        <p>
+            <label for="Email">Correo electrónico: </label>
+            <input type="email" name="email" id="email" placeholder="Email">
+        </p>
+        <p><label><input type="checkbox" value="Ofertas" name="Ofertas">Deseo recibir información sobre novedades y
+            ofertas</label></p>
+        <p><label><input type="checkbox" value="Condiciones" name="Condiciones">Declaro haber leído y aceptar las condiciones
+            generales del programa y la normativa sobre protección de datos</label></p>
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+    </form>
+</body>
+</html>

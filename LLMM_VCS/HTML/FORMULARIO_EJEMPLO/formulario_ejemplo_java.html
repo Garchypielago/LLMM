@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recogida de datos personales</title>
+</head>
+
+<body>
+    <h1>Formulario de registro</h1>
+    <!--<form method="post" action="http://localhost:8080/view-form/post">-->
+    <form method="post" action="http://localhost:8080/view-form/view-form/files" enctype="multipart/form-data">
+        <p>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="nombre">
+        </p>
+        <p>
+            <label for="apellidos">Apellidos: </label>
+            <input type="text" name="apellidos" id="apellidos" placeholder="apellidos">
+        </p>
+        <p>
+            <label for="textarea01">Introduce la descripción</label>
+            <textarea id="textarea01"></textarea>
+        </p>
+        <p>
+            <label for="selectorsimple">Seleccione una opcion</label>
+            <select name="selectorsimple" id="selectorsimple">
+                <option value="Null">Ninguna</option>
+                <option value="LLMM">Lenguaje de marcas</option>
+                <option value="FOL">FOL</option>
+                <option value="PROG">Programación</option>
+                <option value="SI">Sistemas informáticos</option>
+                <option value="BBDD">Bases de datos</option>
+                <option value="EEDD">Entornos de desarrollo</option>
+            </select>
+        </p>
+        <p>
+            <label for="selectorsimple2">Seleccione una opcion</label>
+            <select name="selectorsimple2" id="selectorsimple2" size="3">
+                <option value="LLMM">Lenguaje de marcas</option>
+                <option value="FOL">FOL</option>
+                <option value="PROG">Programación</option>
+                <option value="SI">Sistemas informáticos</option>
+                <option value="BBDD">Bases de datos</option>
+                <option value="EEDD">Entornos de desarrollo</option>
+            </select>
+        </p>
+        <p>
+            <label for="selectormultiple">Seleccione una o varias opciones</label>
+            <select name="selectormultiple" id="selectormultiple" size="6" multiple>
+                <option value="LLMM">Lenguaje de marcas</option>
+                <option value="FOL">FOL</option>
+                <option value="PROG">Programación</option>
+                <option value="SI">Sistemas informáticos</option>
+                <option value="BBDD">Bases de datos</option>
+                <option value="EEDD">Entornos de desarrollo</option>
+            </select>
+        </p>
+        <p>
+            <label for="fichero">Sleccione un fichero</label>
+            <input type="file" name="fichero" id="fichero">
+        </p>
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+</head>
+
+<body>
+
+    <h1>Formulario de Registro</h1>
+
+    <form action="#" method="post">
+        <!-- Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+
+        <!-- Apellidos -->
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+        <br>
+
+        <!-- Tipo -->
+        <label for="tipo">Tipo:</label>
+        <input type="radio" id="alumnado" name="tipo" value="alumnado" required>
+        <label for="alumnado">Alumnado</label>
+        <input type="radio" id="profesorado" name="tipo" value="profesorado" required>
+        <label for="profesorado">Profesorado</label>
+        <br>
+
+        <!-- Correo electrónico -->
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <!-- Casilla de verificación - Novedades y ofertas -->
+        <input type="checkbox" id="novedades" name="novedades">
+        <label for="novedades">Deseo recibir información sobre novedades y ofertas</label>
+        <br>
+
+        <!-- Casilla de verificación - Acepto condiciones -->
+        <input type="checkbox" id="condiciones" name="condiciones" required>
+        <label for="condiciones">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+        <br>
+
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>

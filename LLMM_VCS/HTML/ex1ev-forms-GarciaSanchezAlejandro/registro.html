@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regístrate para recibir nuevas ofertas cada día</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            padding: 0 .5em;
+            display: inline-flex;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Regístrate para recibir nuevas ofertas cada día</h1>
+    </header>
+    <main>
+        <form method="post" action="http://localhost:8080/form-view/post" enctype="multipart/form-data">
+
+            <p><label>Correo electrónico: <input type="email" name="mail" required></label></p>
+
+            <p><label>Password: <input type="password" name="pass" required minlength="8" maxlength="50"></label></p>
+
+            <p><label>Password: <input type="password" name="pass2" required minlength="8" maxlength="50"></label></p>
+
+            <fieldset>
+                <legend>¿Como nos has conocido?</legend>
+                <ul>
+                    <li><label><input type="radio" name="conocernos" value="TK" required>TikTok</label></li>
+                    <li><label><input type="radio" name="conocernos" value="IG">Instagram</label></li>
+                    <li><label><input type="radio" name="conocernos" value="TW">X (antes Twitter)</label></li>
+                    <li><label><input type="radio" name="conocernos" value="AM">Recomendación de un amigo</label></li>
+                    <li><label><input type="radio" name="conocernos" value="O">Otros</label></li>
+                </ul>
+            </fieldset>
+
+            <p><label>Acepto las <a href="https://www.iesclaradelrey.es" target="_blank">condiciones legales</a>
+                <input type="checkbox" id="condiciones" name="condiciones" required></label></p>
+
+            <button type="submit">Registrarme</button>
+        </form>
+    </main>
+    <footer>
+       <p>Oportunidades en tecnología Clara del Rey</p>
+        <address> C/ Padre Claret, 8. 28002 - Madrid. Tfno. 915195257</address>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Pizza</title>
+</head>
+
+<body>
+    <header>
+        <h1>Crea tu PIZZA</h1>
+    </header>
+    <form method="post" action="http://localhost:8080/view-form/view-form/post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>PersonaPizza</legend>
+            <fieldset>
+                <legend>Tipo de masa</legend>
+                <!--ul>li*4>label>input:radio-->
+                <ul>
+                    <li><label><input type="radio" name="tipomasa" value="F">Fina</label></li>
+                    <li><label><input type="radio" name="tipomasa" value="G">Gruesa</label></li>
+                    <li><label><input type="radio" name="tipomasa" value="Q">Bordes de queso</label></li>
+                    <li><label><input type="radio" name="tipomasa" value="SG">Sin gluten</label></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Tamaño de la pizza</legend>
+                <ul>
+                    <li><label><input type="radio" name="tamaño" value="S" required>Pequeña</label></li>
+                    <li><label><input type="radio" name="tamaño" value="M">Mediana</label></li>
+                    <li><label><input type="radio" name="tamaño" value="L">Grande</label></li>
+                    <li><label><input type="radio" name="tamaño" value="XL">Gigante</label></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>base de la pizza</legend>
+                <ul>
+                    <li><label><input type="radio" name="base" value="M" required>Margarita</label></li>
+                    <li><label><input type="radio" name="base" value="BQQ">Barbacoa</label></li>
+                    <li><label><input type="radio" name="base" value="C">Cuatro quesos</label></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Ingredientes adicionales</legend>
+                <label><input type="checkbox" value="IA-PI" name="Pimiento">Pimiento</label>
+                <label><input type="checkbox" value="IA-CE" name="Cebolla">Cebolla</label>
+                <label><input type="checkbox" value="IA-CP" name="Carne picada">Carne picada</label>
+                <label><input type="checkbox" value="IA-PL" name="Pollo">Pollo</label>
+                <label><input type="checkbox" value="IA-BE" name="Berenjena">Berenjena</label>
+                <label><input type="checkbox" value="IA-XQ" name="Extra de queso">Extra de queso</label>
+                <label><input type="checkbox" value="IA-BBQ" name="Salsa barbacoa">Salsa barbacoa</label>
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de entrega</legend>
+            <p>
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="name" placeholder="Nombre" required>
+            </p>
+            <p>
+                <label for="apellidos">Apellidos: </label>
+                <input type="text" name="apellidods" id="subname" placeholder="Apellidos" >
+            </p>
+            <p>
+                <label for="dirección">Dirección: </label>
+                <input type="text" name="dirección" id="address" placeholder="Dirección" required>
+                <label for="teléfono">Teléfono: </label>
+                <input type="tel" name="teléfono" id="phone" placeholder="Teléfono" required>
+            </p>
+            <p>
+                <label for="observaciones">Observaciones</label>
+                <textarea id="observaciones"></textarea>
+            </p>
+        </fieldset>
+        <p>
+            <label for="selectorsimple">Seleccione una manera de pago</label>
+            <select name="selectorsimple" required id="selectorsimple">
+                <option value="">-</option>
+                <option value="T">Tarjeta Bancaria</option>
+                <option value="B">Bizum</option>
+                <option value="P">PayPal</option>
+            </select>
+        </p>
+        <p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetear</button>
+        </p>
+    </form>
+</body>
+
+</html>

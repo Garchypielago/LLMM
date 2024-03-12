@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgrey;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2em;
+}
+
+.cards-container {
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 35px;
+
+    min-width: 400px;
+    max-width: 30%;
+
+}
+
+
+.card header {
+    background-color: black;
+    color: white;
+    padding: .5rem;
+    border-radius: 25px;
+}
+
+article h2 {
+    text-align: center;
+}
+
+.card img {
+    max-width: 50%;
+    float: left;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+/* Cada tarjeta contiene: 
+• Un título h2, dentro de un header.
+• Un párrafo de introducción 
+• Un párrafo de ampliación con una imagen. */

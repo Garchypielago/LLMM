@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<paginas_amarillas>
+    <contacto id="cto01" nombre="Alejandro" apellidos="Garcia Sanchez">
+        <direccion tipo_via="Avenida" nombre="Argentina" numero="30" piso-puerta-letra=""
+            CP="28890" poblacion="Loeches"></direccion>
+        <telefonos fijo="" movil="627011719" trabajo=""></telefonos>
+    </contacto>
+
+    <contacto>
+        <id>cto02</id>
+        <nombre>Alejandro</nombre>
+        <apellidos>Garcia Sanchez</apellidos>
+        <direccion>
+            <tipo_via>Avenida</tipo_via>
+            <nombre>Argentina</nombre>
+            <numero>30</numero>
+            <piso-puerta-letra></piso-puerta-letra>
+            <CP>28890</CP>
+            <poblacion>Loeches</poblacion>
+        </direccion>
+        <telefonos>
+            <fijo></fijo>
+            <movil>627011719</movil>
+            <trabajo></trabajo>
+        </telefonos>
+    </contacto>
+
+    <contacto id="cto03">
+        <nombre>Alejandro</nombre>
+        <apellidos>Garcia Sanchez</apellidos>
+
+        <direccion tipo_via="Avenida" numero="30" CP="28890">
+            <nombre>Argentina</nombre>
+            <poblacion>Loeches</poblacion>
+        </direccion>
+
+        <telefonos fijo="" movil="627011719" trabajo=""></telefonos>
+    </contacto>
+
+    <!-- Favorito -->
+    <contacto id="cto04">
+        <nombre>Alejandro</nombre>
+        <apellidos>Garcia Sanchez</apellidos>
+
+        <direccion>
+            <via tipo="Avd." numero="30">
+                <nombre>Argentina</nombre>
+                <piso-puerta-letra></piso-puerta-letra>
+            </via>
+            <poblacion CP="28890">Loeches</poblacion>
+        </direccion>
+        <telefonos>
+            <telefono tipo="F"></telefono>
+            <telefono tipo="M">627011719</telefono>
+            <telefono tipo="T"></telefono>
+        </telefonos>
+
+    </contacto>
+
+</paginas_amarillas>

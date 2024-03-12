@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(25, 45, 45);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+body a {
+    color: orange;
+}
+
+body a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+body strong {
+    color: yellowgreen;
+}
+
+.article-date {
+    text-align: right;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: cursive;
+    border-bottom: 2px solid greenyellow;
+}
+
+section ul li::first-letter {
+    text-transform: capitalize;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+    background-color: rgb(255, 164, 172);
+    color: red;
+}
+
+nav>ul {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+nav>ul li {
+    text-wrap: nowrap;
+    margin: .5rem
+}
+
+nav>ul li a {
+    padding: 0.25rem 1rem;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    color: rgb(0, 0, 0);
+}
+
+nav ul a:hover {
+    background-color: orange;
+    color: black
+}

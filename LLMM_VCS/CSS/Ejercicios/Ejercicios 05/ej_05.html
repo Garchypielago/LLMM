@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con nosotros</title>
+    <link rel="stylesheet" type="text/css" href="ej_05.css">
+</head>
+
+<body>
+    <header>
+        <h1>Trabaja con nosotros</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li> <a href="#">Misión</a></li>
+            <li> <a href="#">Visión</a></li>
+            <li> <a href="#">Valores</a></li>
+            <li> <a href="#">Trabaja con nosotros</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <form method="post" action="http://localhost:8080/form-view/post" enctype="multipart/form-data">
+            <p>
+                <label>Nombre: <input type="text" name="nombre" required minlength="2" maxlength="100"></label>
+            </p>
+            <p>
+                <label>Apellido: <input type="text" name="apellido1" required minlength="2" maxlength="100"></label>
+            </p>
+
+            <p>
+                <label>Edad: <input type="number" id="edad" name="edad" min="18" max="99" required></label>
+            </p>
+
+            <p>
+                <label for="area">Área:</label>
+                <select id="area" name="area" required>
+                    <option value="">Selecione...</option>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend>Forma preferida de contacto:</legend>
+                <input type="radio" id="email" name="contacto" value="email">
+                <label for="email">Email</label>
+                <input type="radio" id="telefono" name="contacto" value="telefono">
+                <label for="telefono">Teléfono</label>
+                <input type="radio" id="whatsapp" name="contacto" value="whatsapp">
+                <label for="whatsapp">WhatsApp</label>
+            </fieldset>
+
+            <p><label>Curriculum vitae: <input type="file" name="CV" accept=".pdf"></label></p>
+
+            <p> <button type="submit">Enviar</button> <button type="reset">Restablecer</button></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>IES CLARA DEL REY</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--En los grupos de checkboxes, todos debían tener el mismo nombre (atributo name). Tu tienes nombres distintos.
+Tienes atributos accept en  campos file que no lo necesitaban, y falta el “multiple” en el campo para otra documentación.-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta de empleo: programador full stack</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            padding: 0 .5em;
+            display: inline-flex;
+        }
+
+        textarea {
+            width: 99.3%;
+        }
+
+        textarea {
+            height: 3em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Oferta de empleo: programador full stack</h1>
+    </header>
+    <main>
+        <form method="post" action="http://localhost:8080/form-view/post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Datos de identificación y contacto</legend>
+                <p><label>DNI: <input type="text" name="DNI" pattern="[0-9]{8}[A-Z]{1}" required length="9"></label></p>
+                <p><label>Correo electrónico: <input type="email" name="email" required></label></p>
+                <p><label>Foto: <input type="file" name="foto" accept=".jpg,.jpeg,.png"></label></p>
+            </fieldset>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <p>
+                    <label>Nombre: <input type="text" name="nombre" placeholder="Nombre" required minlength="2"
+                            maxlength="100"></label>
+                </p>
+                <p>
+                    <label>Primer apellido: <input type="text" name="apellido1" placeholder="Primer apellido" required
+                            minlength="2" maxlength="100"></label>
+                </p>
+                <p>
+                    <label>Segundo apellido: <input type="text" name="apellido2" placeholder="Segundo apellido"
+                            minlength="2" maxlength="100"></label>
+                </p>
+                <p>
+                    <label>Fecha de nacimiento: <input type="date" name="fecha" required min="01/01/1958"
+                            max="01/01/2004"> </label>
+                </p>
+                <p>
+                    <label>Población de residencia: <input type="text" name="Población de residencia"
+                            placeholder="Población de residencia" required minlength="2" maxlength="50"></label>
+                </p>
+                <p>
+                    <label for="provicincia">Seleccione una opcion</label>
+                    <select name="provincia" id="provincia" required>
+                        <option value="">Selecione provincia</option>
+                        <option value="02">Albacete</option>
+                        <option value="03">Alicante/Alacant</option>
+                        <option value="04">Almería</option>
+                        <option value="01">Araba/Álava</option>
+                        <option value="33">Asturias</option>
+                        <option value="05">Ávila</option>
+                        <option value="06">Badajoz</option>
+                    </select>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend> Datos de Formación</legend>
+                <label for="Niveldeestudios">Seleccione una opcion</label>
+                <select name="Niveldeestudios" id="Niveldeestudios" required>
+                    <option value="">Selecione nivel de estudios</option>
+                    <option value="SE ">Sin estudios</option>
+                    <option value="PR ">Primarios</option>
+                    <option value="SEC">Secundaria</option>
+                    <option value="BAC">Bachillerato</option>
+                    <option value="FPM">FP grado medio</option>
+                    <option value="FPS">FP Grado superior</option>
+                    <option value="EU ">Estudios universitarios</option>
+                </select>
+                <fieldset>
+                    <legend>¿Tiene algun postgrado?</legend>
+                    <ul>
+                        <li><label><input type="radio" name="postgrado" value="Si" required>Si</label></li>
+                        <li><label><input type="radio" name="postgrado" value="No">No</label></li>
+                    </ul>
+                </fieldset>
+                <p><label>Estudios completados: <textarea></textarea></label></p>
+                <p><label>Estudios incompletos: <textarea></textarea></label></p>
+                <p><label>Cursos de formación: <textarea></textarea></label></p>
+            </fieldset>
+            <fieldset>
+                <legend> Conocimientos</legend>
+                <fieldset>
+                    <legend>Lenguajes de programación</legend>
+                    <label><input type="checkbox" value="PY" name="Python">Python</label>
+                    <label><input type="checkbox" value="CS" name="C#">C#</label>
+                    <label><input type="checkbox" value="CPP" name="C++">C++</label>
+                    <label><input type="checkbox" value="JS" name="JavaScript">JavaScript</label>
+                    <label><input type="checkbox" value="PHP" name="PHP">PHP</label>
+                    <label><input type="checkbox" value="SW" name="SW">SW</label>
+                    <label><input type="checkbox" value="J" name="J">J</label>
+                    <label><input type="checkbox" value="GO" name="Go">Go</label>
+                    <label><input type="checkbox" value="SQL" name="SQL">SQL</label>
+                    <label><input type="checkbox" value="RB" name="Ruby">Ruby</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Sistemas operativos</legend>
+                    <label><input type="checkbox" value="M" name="W">Windows</label>
+                    <label><input type="checkbox" value="L" name="L">Linux</label>
+                    <label><input type="checkbox" value="M" name="M">Mac OS</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Frameworks de servidor</legend>
+                    <label><input type="checkbox" value="SB" name=" Spring / Spring boot"> Spring / Spring boot</label>
+                    <label><input type="checkbox" value="DJ" name=" Django"> Django</label>
+                    <label><input type="checkbox" value="LV" name="Laravel ">Laravel </label>
+                    <label><input type="checkbox" value="FL" name=" Flask"> Flask</label>
+                    <label><input type="checkbox" value="RR" name=" Ruby on Rails"> Ruby on Rails</label>
+                    <label><input type="checkbox" value="DOTNET" name=" .Net Core"> .Net Core</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Frameworks JavaScript / CSS</legend>
+                    <label><input type="checkbox" value="NG " name="Angular">Angular</label>
+                    <label><input type="checkbox" value="RA " name="React">React</label>
+                    <label><input type="checkbox" value="VUE" name=" Vue"> Vue</label>
+                    <label><input type="checkbox" value="NXT" name=" Next.js"> Next.js</label>
+                    <label><input type="checkbox" value="EMB" name=" Ember.js"> Ember.js</label>
+                    <label><input type="checkbox" value="JQ " name="jQuery">jQuery</label>
+                    <label><input type="checkbox" value="BS " name="Bootstrap">Bootstrap</label>
+                    <label><input type="checkbox" value="TW " name="TailwindCSS">TailwindCSS</label>
+                    <label><input type="checkbox" value="BLM" name=" Bulma"> Bulma</label>
+                    <label><input type="checkbox" value="FND" name=" Foundation"> Foundation</label>
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend> Documentación adjunta</legend>
+                <p><label>Curriculum vitae: <input type="file" name="CV" accept=".pdf"></label></p>
+                <p><label>Otra documentación: <input type="file" name="otros" accept=".pdf"></label></p>
+            </fieldset>
+
+            <p> <button type="submit">Enviar</button> <button type="reset">Restablecer</button></p>
+        </form>
+    </main>
+    <footer>
+        <p>Clara del Rey Recruiting</p>
+        <address> C/ Padre Claret, 8. 28002 - Madrid. Tfno. 915195257</address>
+    </footer>
+</body>
+
+</html>

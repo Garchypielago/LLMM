@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Pizza</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Pedido de Pizza</h1>
+    </header>
+
+    <main>
+        <form action="http://localhost:8080/view-form/post" method="post">
+
+            <!-- Configurar la pizza -->
+            <fieldset>
+                <legend>Configurar la pizza</legend>
+
+                <!-- Tipo de masa -->
+                <label for="masa">Tipo de masa:</label>
+                <input type="radio" id="fina" name="masa" value="F" required>
+                <label for="fina">Fina</label>
+
+                <input type="radio" id="gruesa" name="masa" value="G">
+                <label for="gruesa">Gruesa</label>
+
+                <input type="radio" id="bordeQueso" name="masa" value="Q">
+                <label for="bordeQueso">Borde relleno de queso</label>
+
+                <input type="radio" id="sinGluten" name="masa" value="SG">
+                <label for="sinGluten">Sin gluten</label>
+                <br>
+
+                <!-- Tamaño -->
+                <label for="tamanio">Tamaño:</label>
+                <select id="tamanio" name="tamanio" required>
+                    <option value="S">Pequeña</option>
+                    <option value="M">Mediana</option>
+                    <option value="L">Grande</option>
+                    <option value="XL">Gigante</option>
+                </select>
+                <br>
+
+                <!-- Pizza base -->
+                <label for="pizzaBase">Pizza base:</label>
+                <select id="pizzaBase" name="pizzaBase" required>
+                    <option value="M">Margarita</option>
+                    <option value="BBQ">Barbacoa</option>
+                    <option value="4Q">Cuatro quesos</option>
+                </select>
+                <br>
+
+                <!-- Ingredientes adicionales -->
+                <label>Ingredientes adicionales:</label>
+                <input type="checkbox" id="pimiento" name="ingredientes" value="IA-PI">
+                <label for="pimiento">Pimiento</label>
+
+                <input type="checkbox" id="cebolla" name="ingredientes" value="IA-CE">
+                <label for="cebolla">Cebolla</label>
+
+                <input type="checkbox" id="carnePicada" name="ingredientes" value="IA-CP">
+                <label for="carnePicada">Carne picada</label>
+
+                <input type="checkbox" id="pollo" name="ingredientes" value="IA-PL">
+                <label for="pollo">Pollo</label>
+
+                <input type="checkbox" id="berenjena" name="ingredientes" value="IA-BE">
+                <label for="berenjena">Berenjena</label>
+
+                <input type="checkbox" id="extraQueso" name="ingredientes" value="IA-XQ">
+                <label for="extraQueso">Extra de queso</label>
+
+                <input type="checkbox" id="salsaBarbacoa" name="ingredientes" value="IA-BBQ">
+                <label for="salsaBarbacoa">Salsa barbacoa</label>
+            </fieldset>
+            <br>
+
+            <!-- Datos de entrega -->
+            <fieldset>
+                <legend>Datos de entrega</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br>
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+                <br>
+
+                <label for="direccion">Dirección completa:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                <br>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <br>
+
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" name="observaciones" rows="4" cols="50"></textarea>
+            </fieldset>
+            <br>
+
+            <!-- Método de pago -->
+            <fieldset>
+                <legend>Método de pago</legend>
+                <label for="metodoPago">Selecciona el método de pago:</label>
+                <select id="metodoPago" name="metodoPago" required>
+                    <option value="T">Tarjeta bancaria</option>
+                    <option value="B">Bizum</option>
+                    <option value="P">PayPal</option>
+                </select>
+            </fieldset>
+            <br>
+
+            <!-- Botones -->
+            <input type="submit" value="Enviar pedido">
+            <input type="reset" value="Restaurar formulario">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pizzería del Rey</p>
+    </footer>
+
+</body>
+
+</html>
