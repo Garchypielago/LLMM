@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <receta rctID="001" comensales="04">
+        <nombre>Sopa de cebolla</nombre>
+
+        <ingredientes>
+            <ingrediente orden="01">
+                <nombre>Cebolla</nombre>
+                <cantidad tipo="Kg" cnt="1"></cantidad>
+            </ingrediente>
+            <ingrediente orden="02">
+                <nombre>Caldo de carne</nombre>
+                <cantidad tipo="L" cnt="2"></cantidad>
+            </ingrediente>
+            <ingrediente orden="03">
+                <nombre>Mantequilla</nombre>
+                <cantidad tipo="g" cnt="100"></cantidad>
+            </ingrediente>
+            <ingrediente orden="04">
+                <nombre>Harina</nombre>
+                <cantidad tipo="Cuchara" cnt="1"></cantidad>
+            </ingrediente>
+            <ingrediente orden="05">
+                <nombre>Queso emmental suizo</nombre>
+                <cantidad tipo="g" cnt="100"></cantidad>
+                <ingrediente_alternativo orden="06">
+                    <nombre>gruyére rallado</nombre>
+                    <cantidad tipo="g" cnt="100"></cantidad>
+                </ingrediente_alternativo>
+            </ingrediente>
+            <ingrediente orden="07">
+                <nombre>Pan tostado en rebanadas</nombre>
+                <cantidad tipo="" cnt=""></cantidad>
+            </ingrediente>
+            <ingrediente orden="08">
+                <nombre>Tomillo</nombre>
+                <cantidad tipo="" cnt=""></cantidad>
+            </ingrediente>
+            <ingrediente orden="09">
+                <nombre>Laurel</nombre>
+                <cantidad tipo="Hoja" cnt="1"></cantidad>
+            </ingrediente>
+            <ingrediente orden="10">
+                <nombre>Pimienta</nombre>
+                <cantidad tipo="" cnt=""></cantidad>
+            </ingrediente>
+        </ingredientes>
+
+        <Proceso>
+            <Paso orden="01">
+                1. Pelar y partir las cebollas en rodajas finas.
+            </Paso>
+            <Paso orden="02">
+                2. Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que estén
+                transparentes
+                sin dorarse.
+            </Paso>
+            <Paso orden="03">
+                3. Añadir la harina sin dejar de remover.
+            </Paso>
+            <Paso orden="04">
+                4. Ponerlo en una cazuela con el caldo, el tomillo y el laurel.
+            </Paso>
+            <Paso orden="05">
+                5. Dejar cocer a fuego lento durante unos 15 minutos.
+
+            </Paso>
+            <Paso orden="06">
+                6. Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno.
+            </Paso>
+        </Proceso>
+    </receta>
+</recetas>
