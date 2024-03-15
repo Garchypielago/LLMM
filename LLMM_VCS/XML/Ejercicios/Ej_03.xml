@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Ciclo xmlns:ciclo="https://instituto.com/ciclo"
+        ciclo:nombre0="DAM" ciclo:horas="600">
+
+    <Modulos xmlns:modulo="https://instituto.com/modulo">
+
+        <modulo:Modulo modulo:cod="01" modulo:horas="120">
+            <modulo:nombre>LLMM</modulo:nombre>
+        </modulo:Modulo>
+
+        <modulo:Modulo modulo:cod="02" modulo:horas="200">
+            <modulo:nombre>Progrmacion</modulo:nombre>
+        </modulo:Modulo>
+
+        <modulo:Modulo modulo:cod="03" modulo:horas="80">
+            <modulo:nombre>FOL</modulo:nombre>
+        </modulo:Modulo>
+
+    </Modulos>
+    <Alumnos xmlns:al= "https://instituto.com/alumno">
+
+        <al:Alumno al:NIF="123456789A">
+            <al:nombre>Alejandro</al:nombre>
+            <al:apellidos>Garcia Sanchez</al:apellidos>
+            <al:fecha>01/01/2001</al:fecha>
+
+            <ModulosMatriculados xmlns:mm= "https://instituto.com/matricula">
+                <mm:modulo  mm:cod="01" mm:fecha="01/01/2023"/>
+                <mm:modulo  mm:cod="02" mm:fecha="01/01/2023"/>
+            </ModulosMatriculados>
+
+            <ModulosConvalidados xmlns:mc= "https://instituto.com/convalidacion">
+                <mc:modulo mc:cod="03" mc:fecha="01/01/2023" mc:nota="8"/>
+            </ModulosConvalidados>
+        </al:Alumno>
+
+        <al:Alumno al:NIF="987654321Z">
+            <al:nombre>Zaida</al:nombre>
+            <al:apellidos>Sanchez Garcia</al:apellidos>
+            <al:fecha>01/01/2000</al:fecha>
+
+            <ModulosMatriculados xmlns:mm= "https://instituto.com/matricula">
+                <mm:modulo  mm:cod="02" mm:fecha="01/01/2023"/>
+            </ModulosMatriculados>
+
+            <ModulosConvalidados xmlns:mc= "https://instituto.com/convalidacion">
+                <mc:modulo  mc:cod="02" mc:fecha="01/01/2023" mc:nota="5"/>
+                <mc:modulo mc:cod="03" mc:fecha="01/01/2023" mc:nota="8"/>
+            </ModulosConvalidados>
+        </al:Alumno>
+        
+    </Alumnos>
+
+</Ciclo>
