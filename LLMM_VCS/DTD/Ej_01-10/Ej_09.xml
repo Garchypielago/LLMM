@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sistemaSolar [
-    <!ELEMENT sistemaSolar (cuerpo*,asteroide*)>
+    <!ELEMENT sistemaSolar (cuerpo+,asteroide*)>
     <!ELEMENT cuerpo (planeta, satelite*)>
     <!ELEMENT planeta (#PCDATA)>
     <!ELEMENT satelite (#PCDATA)>

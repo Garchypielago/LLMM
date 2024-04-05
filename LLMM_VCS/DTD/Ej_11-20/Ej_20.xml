@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE liga SYSTEM "Ej_20.dtd">
+<liga>
+    <partidos>
+        <partido>
+            <local goles="0">
+                <nombreloc> Alpedrete </nombreloc>
+            </local>
+            <visitante goles="1">
+                <nombrevis> Madracos </nombrevis>
+            </visitante>
+        </partido>
+        <partido>
+            <local goles="3">
+                <nombreloc> Guadarrama </nombreloc>
+            </local>
+            <visitante goles="3">
+                <nombrevis> Villaba </nombrevis>
+            </visitante>
+        </partido>
+        <partido>
+            <local goles="4">
+                <nombreloc> CD EL Escorial </nombreloc>
+            </local>
+            <visitante goles="2">
+                <nombrevis> Torrelodones </nombrevis>
+            </visitante>
+        </partido>
+    </partidos>
+
+    <equipos>
+        <equipo rank="1">
+            <nombre></nombre>
+            <entrenador></entrenador>
+            <localidad></localidad>
+            <partidosjugados>
+                <total></total>
+                <perdidos></perdidos>
+                <empatados></empatados>
+            </partidosjugados>
+            <golmedia>
+                <marcados></marcados>
+                <contra></contra>
+            </golmedia>
+        </equipo>
+    </equipos>
+
+</liga>
