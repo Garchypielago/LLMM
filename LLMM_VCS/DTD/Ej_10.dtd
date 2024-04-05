@@ -1,0 +1,23 @@
+<!ELEMENT liga (partidos, equipos)>
+
+<!ELEMENT partidos (partido*)>
+<!ELEMENT partido (local, visitante)>
+<!ELEMENT local (nombreloc, goles)>
+<!ELEMENT visitante (nombrevis, goles)>
+<!ELEMENT nombreloc (#PCDATA)>
+<!ELEMENT nombrevis (#PCDATA)>
+<!ELEMENT goles (#PCDATA)>
+
+<!ELEMENT equipos (equipo*)>
+<!ELEMENT equipo (nombre, entrenador, localidad, rank, partidosjugados, golmedia)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT entrenador (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT rank (#PCDATA)>
+<!ELEMENT partidosjugados (total, perdidos, empatados)>
+<!ELEMENT total (#PCDATA)>
+<!ELEMENT perdidos (#PCDATA)>
+<!ELEMENT empatados (#PCDATA)>
+<!ELEMENT golmedia (marcados, contra)>
+<!ELEMENT marcados (#PCDATA)>
+<!ELEMENT contra (#PCDATA)>

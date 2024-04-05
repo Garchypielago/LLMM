@@ -1,3 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sistemaSolar [
-]>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE liga SYSTEM "Ej_10.dtd">
+<liga>
+    <partidos>
+        <partido>
+            <local>
+                <nombreloc> Alpedrete </nombreloc>
+                <goles> 0 </goles>
+            </local>
+            <visitante>
+                <nombrevis> Madracos </nombrevis>
+                <goles> 1 </goles>
+            </visitante>
+        </partido>
+        <partido>
+            <local>
+                <nombreloc> Guadarrama </nombreloc>
+                <goles> 3 </goles>
+            </local>
+            <visitante>
+                <nombrevis> Villaba </nombrevis>
+                <goles> 3 </goles>
+            </visitante>
+        </partido>
+        <partido>
+            <local>
+                <nombreloc> CD EL Escorial </nombreloc>
+                <goles> 4 </goles>
+            </local>
+            <visitante>
+                <nombrevis> Torrelodones </nombrevis>
+                <goles> 2 </goles>
+            </visitante>
+        </partido>
+    </partidos>
+
+    <equipos>
+        <equipo>
+            <nombre></nombre>
+            <entrenador></entrenador>
+            <localidad></localidad>
+            <rank></rank>
+            <partidosjugados>
+                <total></total>
+                <perdidos></perdidos>
+                <empatados></empatados>
+            </partidosjugados>
+            <golmedia>
+                <marcados></marcados>
+                <contra></contra>
+            </golmedia>
+        </equipo>
+    </equipos>
+
+</liga>
