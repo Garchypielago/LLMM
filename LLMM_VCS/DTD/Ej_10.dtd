@@ -9,7 +9,7 @@
 <!ELEMENT goles (#PCDATA)>
 
 <!ELEMENT equipos (equipo*)>
-<!ELEMENT equipo (nombre, entrenador, localidad, rank, partidosjugados, golmedia)>
+<!ELEMENT equipo (nombre, entrenador, localidad, rank, partidosjugados?, golmedia?)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT entrenador (#PCDATA)>
 <!ELEMENT localidad (#PCDATA)>
