@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<liga xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="Ej_10.xsd">
+    <partidos>
+        <partido>
+            <local>
+                <nombre> Alpedrete </nombre>
+                <goles> 0 </goles>
+            </local>
+            <visitante>
+                <nombre> Madracos </nombre>
+                <goles> 1 </goles>
+            </visitante>
+        </partido>
+        <partido>
+            <local>
+                <nombre> Guadarrama </nombre>
+                <goles> 3 </goles>
+            </local>
+            <visitante>
+                <nombre> Villaba </nombre>
+                <goles> 3 </goles>
+            </visitante>
+        </partido>
+        <partido>
+            <local>
+                <nombre> CD EL Escorial </nombre>
+                <goles> 4 </goles>
+            </local>
+            <visitante>
+                <nombre> Torrelodones </nombre>
+                <goles> 2 </goles>
+            </visitante>
+        </partido>
+    </partidos>
+
+    <equipos>
+        <equipo>
+            <nombre></nombre>
+            <entrenador></entrenador>
+            <localidad></localidad>
+            <rank></rank>
+            <partidosjugados>
+                <total></total>
+                <perdidos></perdidos>
+                <empatados></empatados>
+            </partidosjugados>
+            <golmedia>
+                <marcados></marcados>
+                <contra></contra>
+            </golmedia>
+        </equipo>
+    </equipos>
+
+</liga>
