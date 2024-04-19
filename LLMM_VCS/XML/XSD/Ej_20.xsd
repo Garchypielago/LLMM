@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+    <xs:element name="liga">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="partidos" type="partidosinfo"></xs:element>
+                <xs:element name="equipos" type="equiposinfo"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="partidosinfo">
+        <xs:sequence>
+            <xs:element name="partido" type="partidoinfo" minOccurs="2" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="partidoinfo">
+        <xs:sequence>
+            <xs:element name="local" type="enjuego"></xs:element>
+            <xs:element name="visitante" type="enjuego"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="enjuego">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="goles" type="xs:nonNegativeInteger" default="0" />
+    </xs:complexType>
+
+    <xs:complexType name="equiposinfo">
+        <xs:sequence>
+            <xs:element name="equipo" type="infoequipo" minOccurs="1" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="infoequipo">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"></xs:element>
+            <xs:element name="entrenador" type="xs:string"></xs:element>
+            <xs:element name="localidad" type="xs:string"></xs:element>
+            <xs:element name="partidosjugados" type="infojugados"></xs:element>
+            <xs:element name="golmedia" type="infogoles"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="rank" type="xs:nonNegativeInteger" default="0" />
+    </xs:complexType>
+
+    <xs:complexType name="infojugados">
+        <xs:sequence>
+            <xs:element name="total" type="xs:nonNegativeInteger" default="0"></xs:element>
+            <xs:element name="perdidos" type="xs:nonNegativeInteger" default="0"></xs:element>
+            <xs:element name="empatados" type="xs:nonNegativeInteger" default="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="infogoles">
+        <xs:sequence>
+            <xs:element name="marcados" type="xs:nonNegativeInteger" default="0"></xs:element>
+            <xs:element name="contra" type="xs:nonNegativeInteger" default="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
 
 </xs:schema>

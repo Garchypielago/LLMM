@@ -64,11 +64,4 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:simpleType name="restricciones">
-        <xs:restriction base="xs:nonNegativeInteger">
-
-        </xs:restriction>
-    </xs:simpleType>
-
-
 </xs:schema>

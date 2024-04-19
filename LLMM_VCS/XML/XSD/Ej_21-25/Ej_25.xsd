@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="temporada">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jornada" type="jornadatype" minOccurs="0" maxOccurs="5"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="anio" type="xs:gYear" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="jornadatype">
+        <xs:sequence minOccurs="0">
+            <xs:element name="partido" type="partidotype" minOccurs="3" maxOccurs="3"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="numero" type="numerotype" use="required">
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:simpleType name="numerotype"> 
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"></xs:minInclusive>
+            <xs:maxInclusive value="5"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="partidotype">
+        <xs:sequence>
+            <xs:element name="fecha" type="xs:date"></xs:element>
+            <xs:element name="estadio" type="estadiotype">
+            </xs:element>
+            <xs:element name="local" type="equipo"></xs:element>
+            <xs:element name="visitante" type="equipo"></xs:element>
+            <xs:choice>
+                <xs:element name="resultado" type="resultype"></xs:element>
+                <xs:element name="aplazado" type="vaciotype"></xs:element>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="numero" use="required">
+            <xs:simpleType> 
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="1"></xs:minInclusive>
+                    <xs:maxInclusive value="3"></xs:maxInclusive>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="estadiotype">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="espectadores" default="0">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:nonNegativeInteger">
+                            <xs:maxInclusive value="80000"></xs:maxInclusive>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="resultype">
+        <xs:attribute name="local" type="xs:nonNegativeInteger" use="required"></xs:attribute>
+        <xs:attribute name="visitante" type="xs:nonNegativeInteger" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <xs:simpleType name="equipo" >
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Real Madrid"></xs:enumeration>
+            <xs:enumeration value="RC Murcia"></xs:enumeration>
+            <xs:enumeration value="Real Sociedad"></xs:enumeration>
+            <xs:enumeration value="Villareal"></xs:enumeration>
+            <xs:enumeration value="Valencia"></xs:enumeration>
+            <xs:enumeration value="Osasuna"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="vaciotype">
+        <xs:sequence></xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

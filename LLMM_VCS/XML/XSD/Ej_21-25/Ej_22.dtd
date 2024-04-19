@@ -1,0 +1,32 @@
+<!ELEMENT tienda (datosTienda,datosPeriodo,datosTicket)>
+
+<!ELEMENT datosTienda (nombre,direccion,telefono*)>
+<!ATTLIST datosTienda CIF ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+
+
+<!ELEMENT datosPeriodo EMPTY>
+<!ATTLIST datosPeriodo inicio CDATA #REQUIRED>
+<!ATTLIST datosPeriodo final CDATA #REQUIRED>
+
+
+<!ELEMENT datosTicket (importeIVA,importeConIVA,formaPago,articulos)>
+<!ATTLIST datosTicket codTicket ID #REQUIRED>
+<!ATTLIST datosTicket fecha CDATA #REQUIRED>
+<!ATTLIST datosTicket importeSinIVA CDATA #REQUIRED>
+<!ELEMENT importeIVA (#PCDATA)>
+<!ELEMENT importeConIVA (#PCDATA)>
+<!ELEMENT formaPago (efectivo|tarjeta)>
+<!ELEMENT efectivo (#PCDATA)>
+<!ELEMENT tarjeta (num,titular)>
+<!ELEMENT num (#PCDATA)>
+<!ELEMENT titular (#PCDATA)>
+<!ELEMENT articulos (producto+)>
+<!ELEMENT producto (nombre,cantidad,porcentajeIVA,importeIVA,precioUniIVA,importeTotal)>
+<!ATTLIST producto precioUniSinIVA CDATA #REQUIRED>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT porcentajeIVA (#PCDATA)>
+<!ELEMENT precioUniIVA (#PCDATA)>
+<!ELEMENT importeTotal (#PCDATA)>

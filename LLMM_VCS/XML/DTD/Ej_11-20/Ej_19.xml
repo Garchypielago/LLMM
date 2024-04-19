@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE root [
-    <!ELEMENT root (records*)>
+    <!ELEMENT root (records)>
     <!ELEMENT records (record*)>
     <!ELEMENT record (title?,artist,genre,year)>
     <!ELEMENT title (#PCDATA)>

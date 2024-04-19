@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <!DOCTYPE tienda SYSTEM "Ej_22.dtd">
+<tienda>
+    <datosTienda CIF="A0">
+        <nombre>    </nombre>
+        <direccion> </direccion>
+        <telefono>  </telefono>
+        <telefono>  </telefono>
+    </datosTienda>
+
+    <datosPeriodo inicio="" final=""/>
+
+    <datosTicket codTicket="A1" fecha="" importeSinIVA="">
+        <importeIVA>    </importeIVA>
+        <importeConIVA> </importeConIVA>
+        <formaPago>
+            <efectivo>      </efectivo>
+            <tarjeta>
+                <num>       </num>
+                <titular>   </titular> 
+            </tarjeta>
+        </formaPago>
+        <articulos>
+            <producto precioUniSinIVA="">
+                <nombre>        </nombre>
+                <cantidad>      </cantidad>
+                <porcentajeIVA> </porcentajeIVA>
+                <importeIVA>    </importeIVA>
+                <precioUniIVA>  </precioUniIVA>
+                <importeTotal>  </importeTotal>
+            </producto>
+        </articulos>
+    </datosTicket>
+</tienda> -->
+
+<tienda>
+    <datosTienda CIF="A0">
+        <nombre>    </nombre>
+        <direccion> </direccion>
+        <telefono>  </telefono>
+        <telefono>  </telefono>
+    </datosTienda>
+
+    <datosPeriodo inicio="" final=""/>
+
+    <datosTicket codTicket="A1" fecha="" importeSinIVA="">
+        <importeIVA>    </importeIVA>
+        <importeConIVA> </importeConIVA>
+        <formaPago>
+            <!-- <efectivo>      </efectivo> -->
+            <tarjeta>
+                <num>       </num>
+                <titular>   </titular> 
+            </tarjeta>
+        </formaPago>
+        <articulos>
+            <producto precioUniSinIVA="">
+                <nombre>        </nombre>
+                <cantidad>      </cantidad>
+                <porcentajeIVA> </porcentajeIVA>
+                <importeIVA>    </importeIVA>
+                <precioUniIVA>  </precioUniIVA>
+                <importeTotal>  </importeTotal>
+            </producto>
+        </articulos>
+    </datosTicket>
+</tienda>
