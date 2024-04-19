@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE pacientes [
+    <!ELEMENT pacientes (paciente+)>
+
+    <!ELEMENT paciente (datosPersonales,historialSalud,medicacion*)>
+    <!ATTLIST paciente DNI CDATA #REQUIRED>
+
+    <!ELEMENT datosPersonales (nombre,apellido1,apellido2?,edad,peso,altura)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido1 (#PCDATA)>
+    <!ELEMENT apellido2 (#PCDATA)>
+    <!ELEMENT edad (#PCDATA)>
+    <!ELEMENT peso (#PCDATA)>
+    <!ELEMENT altura (#PCDATA)>
+
+    <!ELEMENT historialSalud (enfermedades,alergias)>
+    <!ELEMENT enfermedades (enfermedad*)>
+    <!ELEMENT enfermedad (#PCDATA)>
+    <!ELEMENT alergias (alergia*)>
+    <!ELEMENT alergia (#PCDATA)>
+
+    <!ELEMENT medicacion (cantidad,frecuencia,duracion)>
+    <!ATTLIST medicacion nombre CDATA #REQUIRED>
+    <!ATTLIST medicacion tipo (Comprimidos|Cápsulas|Sobres|Inyectables) >
+    <!ATTLIST medicacion dosis CDATA #REQUIRED>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT frecuencia (#PCDATA)>
+    <!ELEMENT duracion (#PCDATA)>
+]>
+<!-- Te lo he puesto aqui por que al enlazar con el .dtd otra vez me da error como me paso en otro
+ejercicio -->
+<pacientes>
+    <paciente DNI="123456789A">
+        <datosPersonales>
+            <nombre>Alejandro</nombre>
+            <apellido1>García</apellido1>
+            <apellido2> </apellido2><!-- opcional-->
+            <edad>23</edad>
+            <peso>75.5</peso><!-- decimales-->
+            <altura>180</altura>
+        </datosPersonales>
+        <historialSalud>
+            <enfermedades>
+                <!-- <enfermedad></enfermedad> -->
+            </enfermedades> <!-- 0 o mas-->
+            <alergias>
+                <alergia></alergia>
+            </alergias>
+        </historialSalud>
+        <medicacion nombre="as" tipo="Sobres" dosis="50mg"> <!-- opcional tipo choise--><!-- 0 o mas-->
+            <cantidad>2comprimidos</cantidad>
+            <frecuencia>2veces al dia</frecuencia>
+            <duracion>cronico</duracion> <!-- opcional-->
+        </medicacion>
+    </paciente>
+</pacientes>

@@ -1,0 +1,22 @@
+<!ELEMENT pacientes (paciente+)>
+<!ELEMENT paciente (datosPersonales,historialSalud,medicacion*)>
+<!ATTLIST paciente DNI CDATA #REQUIRED>
+<!ELEMENT datosPersonales (nombre,apellido1,apellido2?,edad,peso,altura)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido1 (#PCDATA)>
+<!ELEMENT apellido2 (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT peso (#PCDATA)>
+<!ELEMENT altura (#PCDATA)>
+<!ELEMENT historialSalud (enfermedades,alergias)>
+<!ELEMENT enfermedades (enfermedad*)>
+<!ELEMENT enfermedad (#PCDATA)>
+<!ELEMENT alergias (alergia*)>
+<!ELEMENT alergia (#PCDATA)>
+<!ELEMENT medicacion (cantidad,frecuencia,duracion)>
+<!ATTLIST medicacion nombre CDATA #REQUIRED>
+<!ATTLIST medicacion tipo (Comprimidos|Cápsulas|Sobres|Inyectables) >
+<!ATTLIST medicacion dosis CDATA #REQUIRED>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT frecuencia (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>

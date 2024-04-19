@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tienda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="datosTienda"></xs:element>
+                <xs:element name="datosPeriodo">
+                    <xs:complexType>
+                        <xs:attribute name="inicio" use="required" />
+                        <xs:attribute name="final" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="datosTicket">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="importeIVA" type="xs:string" />
+                            <xs:element name="importeConIVA" type="xs:string" />
+                            <xs:element name="formaPago">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tarjeta">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="num" type="xs:string" />
+                                                    <xs:element name="titular" type="xs:string" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="articulos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="producto">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre" type="xs:string" />
+                                                    <xs:element name="cantidad" type="xs:string" />
+                                                    <xs:element name="porcentajeIVA"
+                                                        type="xs:string" />
+                                                    <xs:element name="importeIVA" type="xs:string" />
+                                                    <xs:element name="precioUniIVA" type="xs:string" />
+                                                    <xs:element name="importeTotal" type="xs:string" />
+                                                </xs:sequence>
+                                                <xs:attribute name="precioUniSinIVA" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="codTicket" use="required" />
+                        <xs:attribute name="fecha" use="required" />
+                        <xs:attribute name="importeSinIVA" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="direccion" type="xs:string" />
+            <xs:element name="telefono" maxOccurs="unbounded" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="CIF" use="required" />
+    </xs:complexType>
+</xs:schema>
