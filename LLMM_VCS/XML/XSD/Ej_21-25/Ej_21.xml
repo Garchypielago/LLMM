@@ -33,6 +33,7 @@
     </datosTicket>
 </tienda> -->
 
+<?xml-model href="Ej_23.xsd"?>
 <tienda>
     <datosTienda CIF="A0">
         <nombre>    </nombre>

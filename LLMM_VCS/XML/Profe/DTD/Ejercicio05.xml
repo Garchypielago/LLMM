@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE animales [
+    <!ELEMENT animales (perro*, gato*)>
+    <!ELEMENT perro (#PCDATA)>
+    <!ELEMENT gato (#PCDATA)>
+]>
+<!-- Pendiente de resolver -->
+<animales>
+    <perro>Caniche</perro>
+    <perro>Labrador</perro>
+    <gato>Siamés</gato>
+</animales>

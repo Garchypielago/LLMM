@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="jornada">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="equipos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="equipo" type="equipoType">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="partidosJornada">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="partido" type="partidoType" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="equipoType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="entrenador" type="xs:string" />
+            <xs:element name="localidad" type="xs:string" />
+            <xs:element name="posicion" type="xs:nonNegativeInteger" />
+            <xs:element name="partidos" type="computoPartidosType" />
+            <xs:element name="golaveraje" type="golaverajeType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="computoPartidosType">
+        <xs:sequence>
+            <xs:element name="jugados" type="xs:nonNegativeInteger" />
+            <xs:element name="perdidos" type="xs:nonNegativeInteger" />
+            <xs:element name="empatados" type="xs:nonNegativeInteger" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="golaverajeType">
+        <xs:sequence>
+            <xs:element name="favor" type="xs:nonNegativeInteger" />
+            <xs:element name="contra" type="xs:nonNegativeInteger" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="partidoType">
+        <xs:sequence>
+            <xs:element name="local" type="xs:string" />
+            <xs:element name="visitante" type="xs:string" />
+            <xs:element name="golesLocal" type="xs:nonNegativeInteger" default="0" />
+            <xs:element name="golesVisitante" type="xs:nonNegativeInteger" default="0" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

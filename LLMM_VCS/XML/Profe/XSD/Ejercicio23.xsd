@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="facturacion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="comercio" type="tipoComercio"></xs:element>
+                <xs:element name="periodo" type="tipoPeriodo"></xs:element>
+                <xs:element name="tickets" type="listaTickets"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="tipoComercio">
+        <xs:sequence>
+            <xs:element name="nombreComercio" type="xs:string" />
+            <xs:element name="direccionComercio" type="xs:string" />
+            <xs:element name="tlfComercio" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="cif" use="required" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="tipoPeriodo">
+        <xs:sequence>
+            <xs:element name="inicioPeriodo" type="xs:dateTime" />
+            <xs:element name="finPeriodo" type="xs:dateTime" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="listaTickets">
+        <xs:sequence>
+            <!-- Con minOccurs 0 y maxOccurs unbounded conseguimos la cardinalidad 0..n -->
+            <xs:element name="ticket" type="tipoTicket" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoTicket">
+        <xs:sequence>
+            <xs:element name="importeSinIva" type="xs:decimal" />
+            <xs:element name="importeIva" type="xs:decimal" />
+            <xs:element name="importe" type="xs:decimal" />
+            <xs:element name="formaPago">
+                <xs:complexType>
+                    <xs:choice>
+                        <!-- Mirar más abajo el tipo "tipoVacio" -->
+                        <xs:element name="efectivo" type="tipoVacio"></xs:element>
+                        <xs:element name="tarjeta">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="numeracion">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:nonNegativeInteger">
+                                                <xs:totalDigits value="4"></xs:totalDigits>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="titular" type="xs:string" />
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="articulos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <!-- Con minOccurs 1 y maxOccurs unbounded conseguimos la cardinalidad 1..n -->
+                        <xs:element name="articulo" type="tipoArticulo" minOccurs="1"
+                            maxOccurs="unbounded"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <!-- Ejemplo de restricción. Ver el tipo "tipoIdTicket" más abajo -->
+        <xs:attribute name="codigo" type="tipoIdTicket" use="required" />
+        <xs:attribute name="emitido" type="xs:dateTime" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="tipoArticulo">
+        <xs:sequence>
+            <xs:element name="nombreArticulo" />
+            <xs:element name="cantidad" type="xs:positiveInteger" />
+            <!-- Ejemplo de restricción en un tipo. Mirar el tipo "tipoDecimal2decimales" más abajo -->
+            <xs:element name="importeUnitarioSinIva" type="tipoDecimal2decimales" />
+
+            <xs:group ref="importesGroup" />
+        </xs:sequence>
+
+    </xs:complexType>
+
+    <!-- Tipo para los ID de los tickets -->
+    <xs:simpleType name="tipoIdTicket">
+        <xs:restriction base="xs:ID">
+            <!-- Validamos con expresión regular -->
+            <!-- La expresión regular se traduciría por "empieza por T y le siguen 10 dígitos" -->
+            <xs:pattern value="T\d{10}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo para IVA en el que se restringen los posibles valores -->
+    <xs:simpleType name="tipoIva">
+        <xs:restriction base="xs:int">
+            <xs:enumeration value="21"></xs:enumeration>
+            <xs:enumeration value="10"></xs:enumeration>
+            <xs:enumeration value="4"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Ejemplo de tipo a medida con restricciones. 
+         Basamos el tipo en "decimal" y añadimos restricción 
+         para que como máximo tenga dos dígitos decimales. -->
+    <xs:simpleType name="tipoDecimal2decimales">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"></xs:fractionDigits>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Ejemplo de cómo definir un tipo de elemento que no tiene que tener
+         contenido de ninguna clase (ni atributos ni contenido) -->
+    <xs:complexType name="tipoVacio">
+        <!-- Una secuencia vacía y la ausencia de "xs:attribute" 
+             hace que en el elemento de este tipo no se pueda poner nada -->
+        <xs:sequence></xs:sequence>
+    </xs:complexType>
+
+    <xs:group name="importesGroup">
+        <xs:sequence>
+            <!-- Otro ejemplo de restricción en un tipo. Mirar el tipo "tipoIva" más abajo -->
+            <xs:element name="tipoIva" type="tipoIva" />
+            <xs:element name="importeIvaUnitario" type="xs:double" />
+            <xs:element name="importeUnitarioConIva" type="xs:double" />
+            <xs:element name="importe" type="xs:double" />
+        </xs:sequence>
+    </xs:group>
+
+</xs:schema>

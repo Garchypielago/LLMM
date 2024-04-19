@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+    <!ELEMENT root (records)>
+    <!ELEMENT records (record*)>
+    <!ELEMENT record (title?, artist, genre, year)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT artist (#PCDATA)>
+    <!ELEMENT genre (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+]>
+<root>
+    <records>
+        <record>
+            <title>Brand New Eyes</title>
+            <artist>Paramore</artist>
+            <genre>Punk Rock</genre>
+            <year>2011</year>
+        </record>
+        <record>
+            <artist>Various Artist</artist>
+            <genre>Rock</genre>
+            <year />
+        </record>
+    </records>
+</root>
