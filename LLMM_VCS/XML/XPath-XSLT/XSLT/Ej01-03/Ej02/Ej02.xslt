@@ -31,10 +31,10 @@
                     <caption>Ejercicio 2</caption>
                     <thead>
                         <tr>
-                            <th scope="col">Tramo de edad</th>
-                            <th scope="col">Mujeres</th>
-                            <th scope="col">Hombres</th>
-                            <th scope="col">Total</th>
+                            <th>Tramo de edad</th>
+                            <th>Mujeres</th>
+                            <th>Hombres</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>

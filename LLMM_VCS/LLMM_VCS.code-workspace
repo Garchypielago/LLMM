@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../EJERCICIOS/XML/XPath-XSLT"
+		},
+		{
+			"path": "../../DA1D1E-23-24-LLMM/UT06"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "LLMM_VCS"
+	}
+}
