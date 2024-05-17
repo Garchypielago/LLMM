@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Ej07_BB.xslt" type="text/xsl"?>
 <factura numFactura="2022-1254" fechaEmision="2022-04-20">
     <proveedor>
         <identificacion tipo="CIF">G33524125</identificacion>

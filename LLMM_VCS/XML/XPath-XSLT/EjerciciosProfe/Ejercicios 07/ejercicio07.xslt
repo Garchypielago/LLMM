@@ -16,7 +16,7 @@
                 
                 <!-- * declarar el titulo de la pagina con values -->
                 <title>Factura nº
-                    <xsl:value-of select="@numFactura"/> //
+                    <xsl:value-of select="@numFactura"/> 
                     <xsl:value-of select="numeroDeFactura"/>
                 </title>
             </head>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Ej08_BB.xslt" type="text/xsl"?>
 <grupos>
 	<grupo>
 		<idAccion>00002</idAccion>
