@@ -11,6 +11,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "LLMM_VCS"
+		"liveServer.settings.multiRootWorkspaceName": "LLMM_VCS",
+		"liveServer.settings.port": 5501
 	}
 }
